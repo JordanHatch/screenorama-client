@@ -31,6 +31,6 @@ while true; do
 	matchbox-window-manager -use_titlebar no -use_cursor no &
 
 	# Start the browser (See http://peter.sh/experiments/chromium-command-line-switches/)
-	chromium  --allow-file-access --allow-file-access-from-files --app=https://www.gov.uk/
+	chromium  --allow-file-access --allow-file-access-from-files --app=https://www.performance.service.gov.uk/big-screen/register-to-vote
 
 done;
