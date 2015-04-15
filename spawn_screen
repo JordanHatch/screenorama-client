@@ -13,24 +13,17 @@ echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
 cp /app/xinitrc /home/pi/.xinitrc;
 chown pi: /home/pi/.xinitrc
 
-export DIGITISER_ENDPOINT=${DIGITISER_ENDPOINT:="https://api.bitcoinaverage.com/ticker/global/GBP/"}
-export DIGITISER_VALUE_FIELD=${DIGITISER_VALUE_FIELD:="last"}
-export DIGITISER_INTERVAL=${DIGITISER_INTERVAL:="10"}
-export DIGITISER_MESSAGE=${DIGITISER_MESSAGE:="Hello From Resin"}
-
-
 echo "RESIN_DEVICE_ID: ${RESIN_DEVICE_UUID}"
-echo "FOO: ${FOO}"
+
+export SCREENORAMA_URL="https://screenorama-dev.herokuapp.com/${RESIN_DEVICE_UUID}"
+echo "SCREENORAMA_URL: ${SCREENORAMA_URL}"
 
 cp -r /app/web_assets /home/pi/web_assets
 cp /app/boot/config.txt /boot/config.txt
 
 sync
 
-sed -i "s|DIGITISER_ENDPOINT|$DIGITISER_ENDPOINT|g" /home/pi/web_assets/index.html
-sed -i "s|DIGITISER_VALUE_FIELD|$DIGITISER_VALUE_FIELD|g" /home/pi/web_assets/index.html
-sed -i "s|DIGITISER_INTERVAL|$DIGITISER_INTERVAL|g" /home/pi/web_assets/index.html
-sed -i "s|DIGITISER_MESSAGE|$DIGITISER_MESSAGE|g" /home/pi/web_assets/index.html
+sed -i "s|SCREENORAMA_URL|$SCREENORAMA_URL|g" /home/pi/web_assets/index.html
 
 chown -R pi: /home/pi/web_assets
 

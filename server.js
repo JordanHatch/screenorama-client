@@ -12,7 +12,6 @@ var app = tty.createServer({
 var newProcess = spawn('/app/spawn_screen',[''],
 			{
 			    detached: true
-			    // stdio: [ 'ignore', 'ignore', 'ignore' ]
 			}
 			);
 newProcess.stderr.pipe(process.stderr);
