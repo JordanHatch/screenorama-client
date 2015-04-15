@@ -20,6 +20,7 @@ export DIGITISER_MESSAGE=${DIGITISER_MESSAGE:="Hello From Resin"}
 
 
 cp -r /app/web_assets /home/pi/web_assets
+cp /app/boot/config.txt /boot/config.txt
 
 sync
 
