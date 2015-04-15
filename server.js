@@ -9,11 +9,13 @@ var app = tty.createServer({
   },
   port: process.env.PORT
 });
-spawn('/app/spawn_screen',[''],
+var newProcess = spawn('/app/spawn_screen',[''],
 			{
-			    detached: true,
-			    stdio: [ 'ignore', 'ignore', 'ignore' ]
+			    detached: true
+			    // stdio: [ 'ignore', 'ignore', 'ignore' ]
 			}
 			);
+newProcess.stderr.pipe(process.stderr);
+newProcess.stdout.pipe(process.stdout);
 
 app.listen();
