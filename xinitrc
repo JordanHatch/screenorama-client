@@ -32,7 +32,6 @@ while true; do
 	matchbox-window-manager &
 
 	# Start the browser (See http://peter.sh/experiments/chromium-command-line-switches/)
-	chromium
-	# --allow-file-access --allow-file-access-from-files --app=https://www.performance.service.gov.uk/big-screen/register-to-vote
+	chromium --allow-file-access --allow-file-access-from-files --app=http://jdht.ch/rpitest
 
 done;
