@@ -15,7 +15,7 @@ chown pi: /home/pi/.xinitrc
 
 echo "RESIN_DEVICE_ID: ${RESIN_DEVICE_UUID}"
 
-export SCREENORAMA_URL="http://screenorama-dev.herokuapp.com/${RESIN_DEVICE_UUID}"
+export SCREENORAMA_URL="http://screenorama-dev.herokuapp.com/display/${RESIN_DEVICE_UUID}"
 echo "SCREENORAMA_URL: ${SCREENORAMA_URL}"
 
 cp -r /app/web_assets /home/pi/web_assets
