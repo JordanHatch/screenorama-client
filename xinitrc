@@ -25,10 +25,10 @@ while true; do
 	fbset -depth $( cat /sys/module/*fb*/parameters/fbdepth );
 
 	# Hide the cursor
-	# xwit -root -warp $( cat /sys/module/*fb*/parameters/fbwidth ) $( cat /sys/module/*fb*/parameters/fbheight )
+	xwit -root -warp $( cat /sys/module/*fb*/parameters/fbwidth ) $( cat /sys/module/*fb*/parameters/fbheight )
 
 	# Start the window manager
-	matchbox-window-manager -use_titlebar no &
+	matchbox-window-manager -use_titlebar no -use_cursor no &
 
 	# Start the browser (See http://peter.sh/experiments/chromium-command-line-switches/)
 	chromium  --allow-file-access --allow-file-access-from-files --app=file:///home/pi/web_assets/index.html
