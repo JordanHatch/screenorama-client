@@ -1,9 +1,9 @@
 {
-  "name": "resin-kiosk",
-  "description": "Resin app that uses chromium to setup a kiosk",
+  "name": "screenorama-client",
+  "description": "Resin app that connects to Screenorama",
   "repository": {
     "type": "git",
-    "url": "https://lifeeth@bitbucket.org/lifeeth/resin-kiosk.git"
+    "url": "https://github.com/JordanHatch/screenorama-client.git"
   },
   "version": "0.0.2",
   "dependencies": {
